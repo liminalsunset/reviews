@@ -9,3 +9,7 @@ def home(request):
 
 def about(request):
     return HttpResponse('<h1>Welcome to the About Page</h1>')
+
+def signup(request):
+    email = request.Get.get('email')
+    return render(request, 'signup.html', {'email': email})

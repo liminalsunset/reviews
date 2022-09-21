@@ -8,7 +8,6 @@
         <body>
             <div class="container">
                 <h1>Welcome to the Home Page</h1>
-                <h2>Nothing to see here.</h2>
             </div>
             <div class="container">
                 <form>
@@ -17,8 +16,22 @@
                       <input type="text" name="searchMovie" class ="form-control" />
                     </div>
                     <button type="submit" class="btn btn-primary">Search</button>
-                  </form>
-                  Searching for {{ searchTerm }}
+                </form>
+                Searching for {{ searchTerm }}
+                <br />
+                <br />
+                <h2>Join our mailing list:</h2>
+                <form action ="{% url 'signup' %}">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">
+                            Enter your email:
+                        </label>
+                        <input type="email" class="form-control" name="email" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Sign Up
+                    </button>
+                </form>
             </div>
         </body>
     </html>
