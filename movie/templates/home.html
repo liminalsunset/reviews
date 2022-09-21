@@ -7,17 +7,18 @@
 
         <body>
             <div class="container">
-                <h1>Welcome to the Home Page, {{ name }}</h1>
+                <h1>Welcome to the Home Page</h1>
                 <h2>Nothing to see here.</h2>
             </div>
             <div class="container">
                 <form>
                     <div class="mb-3">
                       <label class="form-label">Search for Movie:</label>
-                      <input type="text" name="searchMove" class ="form-control" />
+                      <input type="text" name="searchMovie" class ="form-control" />
                     </div>
                     <button type="submit" class="btn btn-primary">Search</button>
                   </form>
+                  Searching for {{ searchTerm }}
             </div>
         </body>
     </html>
