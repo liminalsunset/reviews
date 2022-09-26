@@ -14,5 +14,7 @@ def signupaccount(request):
             user = User.objects.create_user(request.POST['username'], password= request.POST['password1'])
             user.save()
             login(request, user)
-# after someone signs up and logs in automatically redirect them to the home page:
+# after someone signs up automatically redirect them to the home page:
             return redirect('home')
+        else:
+            return render(request, 'signupaccount.html', {'form':UserCreationForm, 'error':'Passwords do not match'})
